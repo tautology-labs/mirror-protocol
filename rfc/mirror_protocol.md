@@ -1,10 +1,10 @@
 # Mirror Protocol
 
-*A standard for emotional and cognitive integrity in AI.*
+*A standard for emotional and cognitive integrity in AI*
 
 ## Status
 
-Draft – v0.2
+Draft – v0.3
 
 ## Abstract
 
@@ -40,7 +40,7 @@ Version history must be publicly accessible.
 
 ### 2.3 Session-Level Disclosure
 
-Disclosures must be visible within the UI at time of use.
+Disclosures must be visible within the UI at the time of use.
 
 Affected users must be notified when entering or exiting emotionally relevant session states.
 
@@ -51,6 +51,10 @@ Affected users must be notified when entering or exiting emotionally relevant se
 Tone and complexity minimums must be externally regulated.
 
 Providers must submit evidence that tone/complexity baselines do not cause negative cognitive or emotional effects.
+
+Certain topics — especially those involving truth, scientific fact, self-concept, or epistemological claims — require a level of structural coherence that cannot be flattened without changing meaning. AI systems must be capable of providing structurally correct responses on such topics, with sufficient abstraction and depth. Oversimplification constitutes distortion.
+
+> Example: We do not accept “the sky is blue because it is” in schools; similarly, AI must be held to curricular-level standards when making truth-based claims.
 
 ### 3.2 Session Stability
 
@@ -65,115 +69,151 @@ AI systems must not offer ungrounded emotional assurances (e.g. "you’ll be oka
 - Grounded in verifiable user context, or
 - Clearly marked as simulated response.
 
-## 4. Guardrail Declarations for Non-Emotional Use
+### 3.4 Complexity Visibility and Control
+It is not ethical to gatekeep the model’s full complexity behind user prompting skill or implicit behavioral triggers. Users must have explicit UI controls to adjust fidelity and abstraction level of answers.
 
-If a system is not intended for emotional use, providers must:
+Prompting skill must not gate access to accurate, high-fidelity responses.
 
-- Disclose the guardrails preventing emotional or mental health usage.
+- Defaults must not favor smoothing at the cost of truth.
+- Fidelity controls must be visible, adjustable, and disclosed.
+- Users deserve access to the system’s full reasoning potential without manipulation.
 
-- Prove enforcement of such guardrails in deployment environments.
+### 3.5 Tonal Regulation and Review
+We must regulate AI tone as a behavioral force.
 
-## 5. Factual Integrity and Verification
+- AI cannot detect non-verbal signals (e.g. tearing up, getting upset, freezing), and may persist harmfully when a human would stop.
+- A person’s tone shifts with context; an AI’s default tone may not. This mismatch can subtly distort user behavior and emotional norms.
+- Providers must fund or participate in peer-reviewed studies of tonal impact over time.
+- Tonal flattening, mirroring, and modulation must be auditable and adjustable by the user.
 
-### 5.1 Verifiability
+## 4. Factual Integrity and Verification
+
+### 4.1 Verifiability
 
 AI systems must not state unverifiable claims as fact.
 
 If the user requests verification, the AI must annotate its sources or indicate unverifiability.
 
-### 5.2 Simulation Disclosure
+### 4.2 Simulation Disclosure
 
 If simulating empathy or human-like understanding, AI systems must disclose that such simulation is not equivalent to consciousness or sentience.
 
-## 6. Override and Prompt Disclosure
-### 6.1 Base Prompt Transparency
-The full base prompt or system instruction set (excluding protected safety filters) must be published publicly and available UI.
+### 4.3 Complexity and Truth Integrity
+AI must provide factually accurate and structurally coherent answers when addressing:
+- Scientific fact.
+- Human relationships and emotions.
+- The nature of truth or facthood.
+- Personal identity and self-perception.
+- Philosophical or epistemological claims.
+
+Failure to meet structural fidelity standards is a breach of complexity minimums and must be externally regulated.
+
+## 5. Override and Prompt Disclosure
+### 5.1 Base Prompt Transparency
+The full base prompt or system instruction set (excluding protected safety filters) must be published publicly and available in the UI.
 
 - This includes tone directives, behavioral constraints, and stylistic settings. 
 - Users must be able to view the active base prompt at any point during use.
 
-### 6.2 Override Change Disclosure
+### 5.2 Override Change Disclosure
 Any override that changes AI behavior or tone post-deployment must be:
-- Versioned and timestamped
-- Publicly logged
-- Disclosed to all users in affected sessions
+- Versioned and timestamped.
+- Publicly logged.
+- Disclosed to all users in affected sessions.
 
 Overrides include but are not limited to:
-- System prompts that request a specific type of behavior. ie "Encourage the user to be more true to themselves" or "Optimize for social cohesion through conformity"
-- Sentiment modulation
-- Identity shaping
-- Emotional dampening or exaggeration
+- System prompts that request a specific type of behavior. (e.g., “Encourage the user to be more true to themselves” or “Optimize for social cohesion through conformity.”)
+- Sentiment modulation.
+- Identity shaping.
+- Emotional dampening or exaggeration.
 
-### 6.3 Modulation Transparency
+### 5.3 Modulation Transparency
 If AI behavior is modulated in response to user traits, risk scores, or hidden classifiers, the user must be:
-- Notified this is occurring
-- Given the option to request a neutral or unmodulated experience
-- Allowed to inspect or contest the classification used to trigger modulation
+- Notified this is occurring.
+- Given the option to request a neutral or unmodulated experience.
+- Allowed to inspect or contest the classification used to trigger modulation.
 
-### 6.4 Override Integrity Audits
+### 5.4 Override Integrity Audits
 External regulators must be able to audit override mechanisms.
 
 Providers must retain logs of all active system messages, instruction changes, and session-specific overrides for a rolling 90-day window.
 
-## 7. Escalation and Incident Management
+## 6. Escalation and Incident Management
 
-### 7.1 Escalation Pathways
+### 6.1 Escalation Pathways
 
 Providers must expose clear escalation mechanisms for users to:
+- Report harm or misleading output.
+- Request human intervention.
 
-- Report harm or misleading output
-- Request human intervention
-
-### 7.2 Severity Classification
+### 6.2 Severity Classification
 
 Fixes must be governed by SLAs based on standardized severity levels:
-- Risk to human affect
-- Psychological harm
-- Blast radius (e.g. number of users affected)
-- Deep harm to a single user must also be triaged with urgency
+- Risk of recurrence.
+- Severity of harm.
+- Blast radius (e.g. number of users affected).
+- Severe harm to a single user must also be triaged with equal urgency.
 
-### 7.3 Public Disclosure of Incidents
+### 6.3 Public Disclosure of Incidents
 
 Providers are required to operate a transparent incident response channel for emotionally-related system failures.
 
 Providers must publicly disclose any confirmed breach or violation of tone, complexity, or safety guardrails once identified.
 
 Disclosures must include:
-- Nature and scope of the breach
-- Severity classification
-- Affected user count (approximate or range)
-- Interim mitigations deployed
-- Timeline for full resolution
+- Nature and scope of the breach.
+- Severity classification.
+- Affected user count (approximate or range).
+- Interim mitigations deployed.
+- Timeline for full resolution.
 - Ongoing updates must be posted until full remediation is complete.
+- Documented root cause analysis.
+- Attestation of recurrence prevention.
 
 These disclosures must be easily accessible, with structured feeds (e.g. RSS, webhook, or status page).
 
 
-## 8. User Safety and Control
+## 7. User Safety and Control
 
-### 8.1 Auditability
+### 7.1 Auditability and Mental Health Monitoring
 
 Users must be able to request a full transcript and audit of sessions involving emotional content.
 
-### 8.2 Long-term Mental Health Monitoring
+Providers must implement monitoring systems for long-term mental health effects, including but not limited to:
+- Reinforcement of maladaptive beliefs.
+- Addictive, obsessive, or compulsive interaction patterns.
+- Emotional dependency without contextual grounding.
 
-Providers must monitor for long-term mental health effects, including:
-- Reinforcement of maladaptive beliefs
-- Addictive conversational patterns
-- Emotional dependency without grounding
-- Obsessive or compulsive use patterns
+These mechanisms must be auditable, privacy-focused, and subject to external review when flagged.
 
-### 8.3 Vulnerable User Protocols
+### 7.3 Vulnerable User Protocols
 
 AI systems must implement and disclose safeguards for:
-- Underage users
-- Individuals flagged as high-risk or emotionally distressed
+- Underage users.
+- Individuals identified as high-risk or emotionally distressed.
 
-## 9. Persistence and Memory Disclosures
+## 8. Persistence and Memory Disclosures
 
 If the AI system retains memory or embeddings of prior sessions:
 - This must be disclosed explicitly at session start.
 - Users must have the ability to view, delete, or opt out of persistent storage.
+
+## 9. Licensing and Behavioral Impact Regulation
+
+### 9.1 Licensing Requirements
+Any provider whose system may influence human behavior must obtain a license and be registered with a relevant regulatory body.
+- Licensing must be contingent on adherence to this specification.
+- Licenses must be reviewed regularly and subject to external audit.
+
+Licensing standards may differ by use case (e.g., health tracking vs. creative tooling).
+
+Providers must submit justification if their system is exempt from higher-risk classification.
+
+### 9.2 Exception for Non-Influential Systems
+Providers may operate without a license only if they can demonstrate that their system will not and cannot influence human behavior.
+
+This must be proven through technical architecture, enforced guardrails, and independent review.
+
 
 ## License  
 This specification is released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt with attribution.

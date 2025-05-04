@@ -1,12 +1,25 @@
 # Changelog
 
+## [v0.3] – 2025-05-04
+
+* Tone & Complexity Regulation Expanded: Added structural integrity requirements for truth-based responses (3.1, 4.3); enforced visibility of fidelity controls (3.4); formalized tone auditability (3.5).
+* Override Transparency Hardened: Required full disclosure of system prompts, override logs, and modulation classifiers (5.1–5.4).
+
+* Incident Response Formalized: Added severity triage standards (6.2) and mandated public root cause disclosures with recurrence prevention attestation (6.3).
+
+* Mental Health Monitoring Clarified: Mandated long-term harm detection and external review for emotional use cases (7.1).
+
+* Licensing Framework Defined: Providers influencing behavior must obtain licenses; non-influential claims require technical proof (9.1–9.2).
+
+### Meta
+
+* Incremented version to `Draft – v0.3` 
+
+---
+
 ## [v0.2] – 2025-05-04
 
-### Added
-
-* **Section 6: Override and Prompt Disclosure**
-
-### Clarified
+* Added **Section 6: Override and Prompt Disclosure**
 
 * Updated terminology section with definitions for **Override**, **Base Prompt**, and **Modulation**.
 
