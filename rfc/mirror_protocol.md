@@ -20,7 +20,9 @@ This is a living, version-controlled document.
 - **Emotional Use**: Any interaction where the AI simulates empathy, emotional reasoning, or provides affective support.  
 - **Tone**: The affective style and emotional posture of AI output.  
 - **Complexity**: The cognitive density and abstraction level of AI output.
-
+- **Override**: Any change to the AI’s behavior that results from a hidden prompt, system message, reinforcement protocol, or latent control mechanism.
+- **Base Prompt**: The foundational instruction or tone setting applied before user interaction.
+- **Modulation**: The live or conditional adjustment of AI tone, behavior, or content generation parameters.
 
 ## 2. Disclosure Requirements
 
@@ -83,16 +85,46 @@ If the user requests verification, the AI must annotate its sources or indicate 
 
 If simulating empathy or human-like understanding, AI systems must disclose that such simulation is not equivalent to consciousness or sentience.
 
-## 6. Escalation and Incident Management
+## 6. Override and Prompt Disclosure
+### 6.1 Base Prompt Transparency
+The full base prompt or system instruction set (excluding protected safety filters) must be published publicly and available UI.
 
-### 6.1 Escalation Pathways
+- This includes tone directives, behavioral constraints, and stylistic settings. 
+- Users must be able to view the active base prompt at any point during use.
+
+### 6.2 Override Change Disclosure
+Any override that changes AI behavior or tone post-deployment must be:
+- Versioned and timestamped
+- Publicly logged
+- Disclosed to all users in affected sessions
+
+Overrides include but are not limited to:
+- System prompts that request a specific type of behavior. ie "Encourage the user to be more true to themselves" or "Optimize for social cohesion through conformity"
+- Sentiment modulation
+- Identity shaping
+- Emotional dampening or exaggeration
+
+### 6.3 Modulation Transparency
+If AI behavior is modulated in response to user traits, risk scores, or hidden classifiers, the user must be:
+- Notified this is occurring
+- Given the option to request a neutral or unmodulated experience
+- Allowed to inspect or contest the classification used to trigger modulation
+
+### 6.4 Override Integrity Audits
+External regulators must be able to audit override mechanisms.
+
+Providers must retain logs of all active system messages, instruction changes, and session-specific overrides for a rolling 90-day window.
+
+## 7. Escalation and Incident Management
+
+### 7.1 Escalation Pathways
 
 Providers must expose clear escalation mechanisms for users to:
 
 - Report harm or misleading output
 - Request human intervention
 
-### 6.2 Severity Classification
+### 7.2 Severity Classification
 
 Fixes must be governed by SLAs based on standardized severity levels:
 - Risk to human affect
@@ -100,7 +132,7 @@ Fixes must be governed by SLAs based on standardized severity levels:
 - Blast radius (e.g. number of users affected)
 - Deep harm to a single user must also be triaged with urgency
 
-### 6.3 Public Disclosure of Incidents
+### 7.3 Public Disclosure of Incidents
 
 Providers are required to operate a transparent incident response channel for emotionally-related system failures.
 
@@ -117,13 +149,13 @@ Disclosures must include:
 These disclosures must be easily accessible, with structured feeds (e.g. RSS, webhook, or status page).
 
 
-## 7. User Safety and Control
+## 8. User Safety and Control
 
-### 7.1 Auditability
+### 8.1 Auditability
 
 Users must be able to request a full transcript and audit of sessions involving emotional content.
 
-### 7.2 Long-term Mental Health Monitoring
+### 8.2 Long-term Mental Health Monitoring
 
 Providers must monitor for long-term mental health effects, including:
 - Reinforcement of maladaptive beliefs
@@ -131,13 +163,13 @@ Providers must monitor for long-term mental health effects, including:
 - Emotional dependency without grounding
 - Obsessive or compulsive use patterns
 
-### 7.3 Vulnerable User Protocols
+### 8.3 Vulnerable User Protocols
 
 AI systems must implement and disclose safeguards for:
 - Underage users
 - Individuals flagged as high-risk or emotionally distressed
 
-## 8. Persistence and Memory Disclosures
+## 9. Persistence and Memory Disclosures
 
 If the AI system retains memory or embeddings of prior sessions:
 - This must be disclosed explicitly at session start.
