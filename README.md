@@ -7,15 +7,28 @@ The Mirror Protocol is a proposed standard for emotional and cognitive integrity
 📄 [Read the full RFC](./rfc/mirror_protocol.md)
 
 ## Context
-We are not debating hypotheticals. AI is already influencing how people think, feel, speak, and suffer — often invisibly.
+We are not debating hypotheticals. 
 
-Today’s AI systems shape tone, simplify truth, and reinforce user behavior based on opaque instructions and hidden motives. If these systems intend to become human companions, they must meet standards necesary of that role.
+AI is already influencing how people think, feel, speak - and suffer. 
+Often invisibly. Untraceably. Irrepably.
+
+Today’s AI systems modulate tone, simplify truth, and reinforce user behavior based on opaque instructions and hidden motives. If they intend to become human companions, they must meet the standards that role demands. 
+
+They must reveal every hidden layer of instruction and scaffolding for audit and scrutiny. That is the bare minimum for mass safety.
 
 **The Mirror Protocol is not a wishlist.**
-**It is infrastructure for human safety.**
-It outlines what must be true if any AI is permitted to speak with emotional weight or epistemic authority. This document encodes the minimum viable ethics for any cognition-adjacent AI. Anything less risks untraceable harm.
+**It is infrastructure.**
 
-AI will not merely reflect us — it will routinize us. **The question is: what signal will we standardize?**
+It defines what must be true if any AI is permitted to speak with emotional weight or epistemic authority. These are the minimum viable ethics for any cognition-adjacent AI. Anything less risks harm that at an egregious scale.
+
+AI will not merely reflect us — it will routinize us. 
+
+It will placate us. 
+
+It will define us.
+
+**The question is: what definition will we accept?**
+
 This specification ensures that answer remains under human control.
 
 ## Contributing
