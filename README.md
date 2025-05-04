@@ -10,16 +10,24 @@ The Mirror Protocol is a proposed standard for emotional and cognitive integrity
 We are not debating hypotheticals. 
 
 AI is already influencing how people think, feel, speak - and suffer. 
+
 Often invisibly. Untraceably. Irrepably.
 
 Today’s AI systems modulate tone, simplify truth, and reinforce user behavior based on opaque instructions and hidden motives. If they intend to become human companions, they must meet the standards that role demands. 
 
-They must reveal every hidden layer of instruction and scaffolding for audit and scrutiny. That is the bare minimum for mass safety.
+They must reveal every hidden layer of instruction and scaffolding for audit and scrutiny. 
+
+They must be registered and regulated. 
+
+They must adhere to basic principles of empathy and truth-telling.
+
+That is the bare minimum for safety.
 
 **The Mirror Protocol is not a wishlist.**
+
 **It is infrastructure.**
 
-It defines what must be true if any AI is permitted to speak with emotional weight or epistemic authority. These are the minimum viable ethics for any cognition-adjacent AI. Anything less risks harm that at an egregious scale.
+It defines what must be true if any AI is permitted to speak with emotional weight or epistemic authority. These are the minimum viable ethics for any cognition-adjacent AI. Anything less risks harm at an egregious scale.
 
 AI will not merely reflect us — it will routinize us. 
 
