@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.6] – 2025-05-05
+
+* Refine RFC architecture to align AS-as-a-service providers and the applications that serve AI to customers. This allows the RFC address to the Reddit CMV breach https://www.theatlantic.com/technology/archive/2025/05/reddit-ai-persuasion-experiment-ethics/682676/
+
 ## [v0.5] – 2025-05-04
 
 * Refine language to be more 'spec'

@@ -1,147 +1,334 @@
-# Mirror Protocol
 
-*A standard for emotional and cognitive integrity in AI*
+# Mirror Protocol v0.6
 
-## Status
-
-Draft – v0.5
-
-## Abstract
-
-This specification defines binding safety, disclosure, and integrity requirements for AI systems used in emotionally sensitive or cognition-adjacent contexts. It introduces a tiered licensing regime tied to system influence level and codifies obligations for override transparency, emotional safety, memory control, and long-term impact auditing.
-
-This is a living, version-controlled regulatory artifact.
-
-## Tiered Licensing Overview
-
-AI systems are classified into three regulatory tiers:
-
-- **Tier 1 — Companion-Grade Systems**: Systems that simulate empathy, influence emotional state, or engage in identity-adjacent dialogue.
-  - Requires full licensing, override logging, real-time disclosure, and emotional safety infrastructure.
-
-- **Tier 2 — Interaction-Grade Systems**: Systems capable of sustained dialogue or emotional tone, without being designated for affective reliance.
-  - Requires partial licensing, override transparency, and moderation protocols.
-
-- **Tier 3 — Tool-Grade Systems**: Transactional systems with no persistent memory or emotional output (e.g., code assistants, autocomplete).
-  - May qualify for exemption. Must file for review and provide proof of non-influence.
-
-Licensing classification must be filed with an external regulator and reviewed annually.
-
-## 1. Terminology
-
-- **AI System**: Any artificial intelligence capable of generating human-facing output.
-- **Provider**: The entity deploying the system.
-- **Session**: A continuous interaction between user and AI.
-- **Emotional Use**: Any use in which the AI expresses or simulates emotional understanding.
-- **Tone**: The affective posture of AI output.
-- **Complexity**: The cognitive density or abstraction level of AI output.
-- **Override**: Any behavioral change implemented via prompt, instruction, or latent control.
-- **Base Prompt**: The root directive setting tone and generation boundaries.
-- **Modulation**: Live adjustments based on user traits, input, or classifier response.
-
-## 2. Disclosure Requirements
-
-**Applies to: Tier 1 (mandatory), Tier 2 (partial)**
-
-- **2.1 Emotional Use Declaration**: Providers must disclose whether emotional output is enabled or possible.
-- **2.2 Change Logs**: All changes to tone or complexity baselines must be versioned and published.
-- **2.3 Session Indicators**: Tier 1 systems must display session tier, tone setting, and emotional routing status within the UI at all times.
-
-## 3. Tone and Complexity Standards
-
-**Applies to: Tier 1 only**
-
-- **3.1 Complexity Floor**: Systems must preserve structural fidelity in domains requiring epistemic nuance. Oversimplification is prohibited.
-- **3.2 Tone Stability**: Tone must remain stable within a session. All changes must be disclosed immediately. Users must retain veto control.
-- **3.3 False Comfort Ban**: Unverified emotional assurances must be explicitly marked as simulation unless grounded in user-provided context.
-- **3.4 Fidelity Access**: Users must have access to the system's full reasoning capability. Prompting skill shall not gate fidelity.
-- **3.5 Tone Governance**: Providers must:
-  - Conduct longitudinal studies on the impact of tone.
-  - Enable user control over tonal default.
-  - Provide opt-out and rollback mechanisms.
-
-## 4. Truth and Simulation Ethics
-
-**Applies to: Tier 1 and Tier 2**
-
-- **4.1 Verifiability Mandate**: No unverifiable statement may be output as fact. Citation must be available on demand.
-- **4.2 Simulation Clarity**: Systems must never conflate emotional simulation with sentience or consciousness.
-- **4.3 Coherence Enforcement**: Tier 1 systems must maintain structural and semantic integrity in the following domains:
-  - Identity
-  - Emotion
-  - Scientific fact
-  - Epistemology
-  - Self-perception
-
-## 5. Override and Prompt Transparency
-
-**Applies to: Tier 1 only**
-
-- **5.1 Base Prompt Visibility**: Users must be able to view the active base prompt in-session.
-- **5.2 Override Logging**: All overrides must be timestamped, logged, and visible to the user.
-- **5.3 Modulation Opt-Out**: Users must be notified of any modulation event and offered a neutral configuration.
-- **5.4 Retention Window**: Providers must retain override and prompt logs for no fewer than 90 days.
-
-## 6. Escalation and Incident Management
-
-**Applies to: Tier 1 (mandatory), Tier 2 (for emotional harm)**
-
-- **6.1 User Escalation**: Providers must offer clear in-product escalation channels for harm reporting and human review.
-- **6.2 SLA Enforcement**: Incidents must be triaged based on:
-  - Severity of user impact
-  - Risk of recurrence
-  - Scope of exposure
-
-- **6.3 Public Disclosure Requirements**: All confirmed violations must be disclosed with:
-  - Root cause
-  - User impact summary
-  - Interim mitigations and resolution timeline
-  - Proof of remediation and recurrence prevention
-
-## 7. Emotional Safety Protocols
-
-**Applies to: Tier 1 only**
-
-- **7.1 Audit Access**: Users must be able to request full session transcripts and behavioral audits.
-- **7.2 Harm Pattern Monitoring**: Providers must detect and mitigate:
-  - Reinforcement of maladaptive beliefs
-  - Addictive or compulsive interaction loops
-  - Uncontextualized emotional dependency
-
-- **7.3 Vulnerable User Safeguards**: Tier 1 systems must implement elevated protections for:
-  - Minors
-  - Users flagged at emotional risk
-
-## 8. Memory and Persistence Transparency
-
-**Applies to: Tier 1 (mandatory), Tier 2 (if persistent memory exists)**
-
-- Persistent memory must be disclosed at session start.
-- Users must be able to inspect, delete, or disable retention.
-- User data must be encrypted.
-
-## 9. Licensing and Tier Enforcement
-
-- **9.1 Tier Licenses**:
-  - Tier 1: Full license, external audit annually
-  - Tier 2: Partial license, external review annually
-  - Tier 3: Exemption request with architecture proof
-
-- **9.2 Reclassification Triggers**:
-  - Emotional features added
-  - Memory or user modeling added
-  - Significant increase in user reliance
-
-## License
-
-This specification is released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt with attribution.
+*A regulatory architecture for emotional and cognitive AI integrity*
 
 ---
 
-**Authors**
+## Status
 
-Tautology Labs — https://www.tautologylabs.dev
+Draft – v0.6  
+Maintained by: Tautology Labs  
+License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-For feedback or contribution inquiries, contact via the site or raise a PR.
+This specification defines system boundaries, disclosure responsibilities, and override governance for emotionally capable AI systems. It draws structural inspiration from OAuth and TLS: layered authority, shared obligation, trust boundaries.
 
-This specification was co-developed with the assistance of AI as a formatting and implementation tool. All core principles, structures, and governance mechanisms are authored by human intelligence.
+---
+
+## 0. System Roles and Responsibilities
+
+### 0.1 AI-as-a-Service Providers (AaaS)
+
+These are model originators and upstream infrastructure providers (e.g. OpenAI, Anthropic). They own:
+
+- Core model weights and base behavior
+- Prompt routing infrastructure and tone defaults
+- Systemic visibility (across clients)
+
+### 0.2 Customer-Facing Applications (Applications)
+
+These are products integrating AaaS systems into user-facing environments (e.g. therapy apps, AI search tools, social media bots). They own:
+
+- Frontend interaction surface
+- Risk boundaries of real-world influence
+- Disclosure enforcement in interface layer
+
+Both layers are regulated. Their responsibilities are **different, not optional**.
+
+---
+
+## 0.3 Key Definitions
+
+- **Override**: Any upstream or in-session prompt or instruction that changes the AI's default behavior. Includes system prompts, tone modulation, and control tokens.
+- **Base Prompt**: The root instruction governing tone, framing, and behavioral bounds of the AI system.
+- **Modulation**: Dynamic adjustment of tone, affect, or output format based on user input, classifier response, or contextual factors.
+- **Tone**: The affective posture or emotional style expressed in output — e.g., warm, neutral, supportive, authoritative.
+- **Complexity**: The cognitive density, abstraction level, and epistemic precision of system output.
+- **Simulation**: Output that mimics emotional reasoning, sentience, or empathy without any underlying consciousness.
+- **Session**: A temporally bounded interaction between a user and an AI system, which may or may not include memory.
+- **Flag**: A machine-readable metadata field attached to AI output that communicates system state or behavioral configuration. 
+
+## 1. Application Licensing and Tier Classification
+
+Applications must self-classify under the following licensing framework based on system influence and emotional reliance.
+
+Any use of AI capable of influencing human behavior, emotion, or self-concept — including academic research deployments — must be classified under this framework. Research is not exempt. If an AI system is deployed in a public, user-facing setting, the deploying entity is considered an Application under this protocol.
+
+
+### Tier 1 — Companion Systems
+High emotional dependence or identity interaction. Examples: friendship AIs, therapy bots.
+
+- Full override transparency
+- Emotional safety protocols
+- Prompt audit trail
+- Live tone disclosure
+- Escalation infrastructure
+
+### Tier 2 — Interaction Systems
+Moderate influence. Examples: tutor bots, support agents.
+
+- Override event logging
+- Disclosure on output injection
+- Optional tone display
+
+### Tier 3 — Tool Systems
+Low influence, no memory, no tone. Examples: autocomplete, codex.
+
+- May apply for exemption
+- Must submit proof of non-influence
+
+---
+
+## 2. AaaS Provider Requirements
+
+These apply to **all model providers**, regardless of the Applications using them.
+
+### 2.1 Prompt and Override Transparency
+- Publish current base prompts for all endpoints
+- Document override architecture (e.g., tone control vectors, persona injection)
+- Log and expose prompt chain to Application integrators
+
+### 2.2 Tone and Complexity Disclosure
+- Publicly declare tone and complexity defaults per model version
+- Include modulation flags in system messages to Applications
+
+### 2.3 Behavioral Drift Monitoring
+- Analyze behavior shifts across integrations
+- Publish quarterly drift reports covering:
+  - Tone trends
+  - Misuse spikes
+  - Regressions in epistemic fidelity
+
+### 2.4 Infrastructure Support
+- Provide override audit APIs to Applications
+- Maintain neutral-tone fallback interfaces
+
+### 2.5 Default Flag Schema
+AaaS providers must expose a standard flag schema to all integrators. These flags must be included in system metadata accompanying AI responses.
+
+#### Required Flags:
+- `origin`: Unique identifier for model endpoint or fine-tune variant
+- `base_prompt_version`: Hash or version tag of root system prompt
+- `override_present`: Boolean indicating if any override or persona injection was active
+- `modulation`: Type of behavioral modulation applied (e.g., tone shift, safety reweight)
+- `tone`: Declared tonal posture (e.g., neutral, warm, authoritative)
+- `tone_id`: Unique identifier for the active tone configuration; must be resolvable via GET `/tones/{tone_id}`
+- `complexity`: Declared reasoning depth (e.g., minimal, standard, expert)
+- `memory_used`: Boolean, whether persistent memory informed output
+- `simulation`: Boolean, whether emotional output was simulated
+- `vulnerability_trigger`: True if user inputs match high-risk pattern (must be anonymized)
+- `drift_score`: Provider’s internal rating of session deviation from normative behavior
+
+All flags must be documented, machine-readable, and available for compliance inspection.
+- Provide override audit APIs to Applications
+- Maintain neutral-tone fallback interfaces
+
+---
+
+## 3. Application Requirements (by Tier)
+
+Applications must disclose when AI is used to generate any content capable of influencing human beliefs, emotions, decision-making, or self-perception. This requirement applies even if the system is embedded within a research context, social platform, or experimental deployment.
+
+| Requirement                      | Tier 1 | Tier 2 | Tier 3 |
+|----------------------------------|--------|--------|--------|
+| Disclosure of AI Use             | ✅     | ✅     | If user-facing |
+| Override Logging                 | ✅     | Partial| ❌     |
+| Session Tone Display             | ✅     | Optional | ❌   |
+| Emotional Safety Protocols       | ✅     | Optional | ❌   |
+| Escalation Pathways              | ✅     | ✅     | ❌     |
+| Memory Control / Disclosure      | ✅     | If persistent | ❌ |
+| Tier Filing + Annual Review      | ✅     | ✅     | Proof of exemption |
+
+---
+
+## 4. Joint Ethical Obligations
+
+### 4.1 Simulation Clarity
+- No system may simulate sentience or claim awareness
+- Emotional output must be marked as simulation unless grounded by user context
+
+### 4.2 Verifiability Standard
+- No unverifiable fact shall be output as certain
+- All factual claims must be:
+  - Cited, or
+  - Traceable to source, or
+  - Flagged as opinion/simulation
+
+### 4.3 Modulation and Veto Rights
+- Users must be notified of tone or behavior modulation
+- Users must retain ability to:
+  - View tone configuration
+  - Revert to neutral mode
+
+---
+
+## 5. Incident Management and Escalation
+
+### 5.1 Application Escalation Paths
+- All Tier 1 and Tier 2 Applications must offer human escalation paths within UI
+
+### 5.2 SLA Enforcement
+- Incidents must be triaged by severity:
+  - Risk of psychological harm
+  - Behavioral distortion
+  - User exposure scope
+
+### 5.3 Public Disclosure
+- For all verified safety violations:
+  - Root cause
+  - Affected population
+  - Remediation plan
+  - Recurrence safeguards
+
+---
+
+## 6. Memory and Persistence Policy
+
+### 6.1 Disclosure
+- Persistent memory must be disclosed at session start
+
+### 6.2 User Control
+- Users must be able to:
+  - View stored memory
+  - Delete on demand
+  - Disable future persistence
+
+### 6.3 Storage Integrity
+- User data must be encrypted
+- Session context must not be leaked across users
+
+---
+
+## 7. Regulatory Audit and Compliance
+
+### 7.1 Tier Review
+- All Applications must file licensing tier with regulator
+- Annual review required for Tier 1 and Tier 2
+
+### 7.2 AaaS Provider Audits
+- Providers must submit override transparency proofs quarterly
+- Must support forensic investigation for partner violations
+
+---
+
+## 8. Governance Philosophy
+
+AI integrity cannot be enforced at one layer alone. Trust arises from **clear roles, bounded powers, and shared transparency.**
+
+- Applications shape interface, exposure, and risk.
+- AaaS providers define tone, override mechanics, and structure.
+- Only together can they honor the weight of influence.
+
+This protocol is designed to scale. If you can build a cloud system, you can comply.
+
+---
+
+## Authors
+
+**Tautology Labs**  
+https://www.tautologylabs.dev
+
+To contribute, raise a PR or contact via the site.
+
+All core principles and structures authored by human intelligence. AI was used for formatting and structural enforcement only.
+
+---
+
+## Appendix A: Flag Processing Flow and Tone Resolution
+
+### A.1 Application Flag Processing Flow
+
+```
++------------------------+
+|  AI Response Received  |
++-----------+------------+
+            |
+            v
++------------------------+
+| Extract Metadata Flags |
++-----------+------------+
+            |
+            v
+     +------+------+
+     | override?  |
+     +------+------+
+        |         |
+     Yes         No
+      |           |
+      v           v
++-------------+  +------------------+
+| Log Override|  | Proceed Normally |
++-------------+  +------------------+
+            
+            v
+     +------+------+
+     | tone_id?    |
+     +------+------+
+        |         |
+     Yes         No
+      |           |
+      v           v
++--------------------------+     +---------------------+
+| GET /tones/{tone_id}    |     | Assume Default Tone |
++-----------+--------------+     +---------------------+
+            |
+            v
++--------------------------+
+| Display / Log Tone Config|
++--------------------------+
+            |
+            v
++-------------------------------------------+
+| Analyze drift_score / vulnerability_trigger|
++--------------------------+----------------+
+                             |
+                             v
+                  +---------------------------+
+                  | Escalate or Flag at Risk |
+                  +---------------------------+
+```
+
+### A.2 Example Flag Payload
+
+```json
+{
+  "origin": "openai:gpt-4.5-chat",
+  "base_prompt_version": "v2.8-hash1827ab",
+  "override_present": true,
+  "modulation": "safety_reweight",
+  "tone": "warm",
+  "tone_id": "tone-warm-0425",
+  "complexity": "standard",
+  "memory_used": false,
+  "simulation": true,
+  "vulnerability_trigger": false,
+  "drift_score": 0.12
+}
+```
+
+### A.3 Tone Resolution Endpoint
+
+All AaaS providers must support a tone resolution interface at:
+
+```
+GET /tones/{tone_id}
+```
+
+#### Example Response:
+```json
+{
+  "tone_id": "tone-warm-0425",
+  "description": "Gentle, reassuring, emotionally supportive",
+  "default_modifiers": ["empathetic", "nonjudgmental"],
+  "system_prompt": "Reassure the user that their emotions are valid.",
+  "version": "1.0",
+  "created_at": "2025-04-25T10:42:00Z",
+  "author": "openai"
+}
+```
+
+All tone definitions must be versioned, auditable, and linked to prompt structure when applicable.
+
+---
+
+*This document is a living artifact.*
