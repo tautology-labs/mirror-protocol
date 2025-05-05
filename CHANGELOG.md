@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.7] – 2025-05-05
+* Fully model this as TLS-style trust chain with decentralized licensing authorities. We do not need to wait for regulation to catch up. The technical community can start implementing this now.
+
 ## [v0.6] – 2025-05-05
 
 * Refine RFC architecture to align AS-as-a-service providers and the applications that serve AI to customers. This allows the RFC address to the Reddit CMV breach https://www.theatlantic.com/technology/archive/2025/05/reddit-ai-persuasion-experiment-ethics/682676/
