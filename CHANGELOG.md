@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.5] – 2025-05-04
+
+* Refine language to be more 'spec'
+
 ## [v0.4] – 2025-05-04
 
 * Refactor to use tiered classification system

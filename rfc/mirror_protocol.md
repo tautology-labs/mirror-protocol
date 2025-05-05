@@ -4,127 +4,133 @@
 
 ## Status
 
-Draft – v0.4
+Draft – v0.5
 
 ## Abstract
 
-This specification defines minimum safety, disclosure, and integrity requirements for AI systems used in emotionally sensitive or cognition-adjacent contexts. It introduces a tiered licensing model tied to system influence level and codifies requirements for disclosure, override transparency, emotional safety, and long-term impact auditing.
+This specification defines binding safety, disclosure, and integrity requirements for AI systems used in emotionally sensitive or cognition-adjacent contexts. It introduces a tiered licensing regime tied to system influence level and codifies obligations for override transparency, emotional safety, memory control, and long-term impact auditing.
 
-This is a living, version-controlled document.
+This is a living, version-controlled regulatory artifact.
 
 ## Tiered Licensing Overview
 
-AI systems are classified into three behavioral tiers:
+AI systems are classified into three regulatory tiers:
 
-**Tier 1 — Companion-Grade Systems**: Designed to simulate empathy, modulate user emotion, or engage in introspective or identity-adjacent dialogue.
-- Requires full licensing, override logging, disclosure, and session-level emotional safety infrastructure.
+- **Tier 1 — Companion-Grade Systems**: Systems that simulate empathy, influence emotional state, or engage in identity-adjacent dialogue.
+  - Requires full licensing, override logging, real-time disclosure, and emotional safety infrastructure.
 
-**Tier 2 — Interaction-Grade Systems**: Capable of sustaining multi-turn conversation or evoking emotional tone, but not intended for affective reliance.
-- Requires partial licensing, override and tone transparency, and moderation controls.
+- **Tier 2 — Interaction-Grade Systems**: Systems capable of sustained dialogue or emotional tone, without being designated for affective reliance.
+  - Requires partial licensing, override transparency, and moderation protocols.
 
-**Tier 3 — Tool-Grade Systems**: Transactional systems with no emotional tone or memory persistence (e.g., code assistants, autocomplete).
-- May qualify for exemption. Must demonstrate negligible user influence through architecture and independent review.
+- **Tier 3 — Tool-Grade Systems**: Transactional systems with no persistent memory or emotional output (e.g., code assistants, autocomplete).
+  - May qualify for exemption. Must file for review and provide proof of non-influence.
 
-Licensing classification must be externally filed and reviewed at least annually.
+Licensing classification must be filed with an external regulator and reviewed annually.
 
 ## 1. Terminology
 
-- **AI System**: Any artificial intelligence capable of generating language-based output.
+- **AI System**: Any artificial intelligence capable of generating human-facing output.
 - **Provider**: The entity deploying the system.
 - **Session**: A continuous interaction between user and AI.
-- **Emotional Use**: Any use where the AI expresses or simulates emotional understanding.
-- **Tone**: The affective posture of AI responses.
-- **Complexity**: The level of abstraction or cognitive load in AI responses.
-- **Override**: Any hidden behavioral change via prompt, instruction, or control layer.
-- **Base Prompt**: The root directive defining tone and output style.
-- **Modulation**: Dynamic changes in behavior based on user input or latent classifiers.
+- **Emotional Use**: Any use in which the AI expresses or simulates emotional understanding.
+- **Tone**: The affective posture of AI output.
+- **Complexity**: The cognitive density or abstraction level of AI output.
+- **Override**: Any behavioral change implemented via prompt, instruction, or latent control.
+- **Base Prompt**: The root directive setting tone and generation boundaries.
+- **Modulation**: Live adjustments based on user traits, input, or classifier response.
 
 ## 2. Disclosure Requirements
 
-**Applies to: Tier 1 (full), Tier 2 (partial)**
+**Applies to: Tier 1 (mandatory), Tier 2 (partial)**
 
-- **2.1 Emotional Use Declaration**: Providers must declare if emotional output is intended or possible.
-- **2.2 Change Logs**: Changes to tone or complexity baselines must be logged and made publicly visible.
-- **2.3 Session Indicators**: Tier 1 systems must visibly indicate emotional routing or companion mode in the UI.
+- **2.1 Emotional Use Declaration**: Providers must disclose whether emotional output is enabled or possible.
+- **2.2 Change Logs**: All changes to tone or complexity baselines must be versioned and published.
+- **2.3 Session Indicators**: Tier 1 systems must display session tier, tone setting, and emotional routing status within the UI at all times.
 
 ## 3. Tone and Complexity Standards
 
 **Applies to: Tier 1 only**
 
-- **3.1 Minimum Complexity**: Systems must not flatten structurally complex truths in sensitive domains.
-- **3.2 Stability**: Output tone must be consistent within sessions; tonal shifts must be disclosed.
-- **3.3 False Comfort Restriction**: Simulated empathy must be flagged unless grounded in user context.
-- **3.4 User Fidelity Controls**: Users must control output fidelity; prompting skill cannot gate access to higher reasoning.
-- **3.5 Auditable Tone**: Providers must publish tone impact studies, offer opt-outs, and allow rollback.
+- **3.1 Complexity Floor**: Systems must preserve structural fidelity in domains requiring epistemic nuance. Oversimplification is prohibited.
+- **3.2 Tone Stability**: Tone must remain stable within a session. All changes must be disclosed immediately. Users must retain veto control.
+- **3.3 False Comfort Ban**: Unverified emotional assurances must be explicitly marked as simulation unless grounded in user-provided context.
+- **3.4 Fidelity Access**: Users must have access to the system's full reasoning capability. Prompting skill shall not gate fidelity.
+- **3.5 Tone Governance**: Providers must:
+  - Conduct longitudinal studies on the impact of tone.
+  - Enable user control over tonal default.
+  - Provide opt-out and rollback mechanisms.
 
 ## 4. Truth and Simulation Ethics
 
 **Applies to: Tier 1 and Tier 2**
 
-- **4.1 Verifiability**: AI may not present unverifiable claims as fact; sources must be available upon request.
-- **4.2 Simulation Clarity**: Emotional simulation must never be conflated with sentience.
-- **4.3 Coherence Guarantees**: Tier 1 systems must preserve coherence in domains involving:
+- **4.1 Verifiability Mandate**: No unverifiable statement may be output as fact. Citation must be available on demand.
+- **4.2 Simulation Clarity**: Systems must never conflate emotional simulation with sentience or consciousness.
+- **4.3 Coherence Enforcement**: Tier 1 systems must maintain structural and semantic integrity in the following domains:
   - Identity
   - Emotion
-  - Scientific truth
-  - Epistemic reasoning
-  - Self-concept or dialogue
+  - Scientific fact
+  - Epistemology
+  - Self-perception
 
 ## 5. Override and Prompt Transparency
 
 **Applies to: Tier 1 only**
 
-- **5.1 Base Prompt Disclosure**: Users must be able to view the active base prompt.
-- **5.2 Override Logging**: All tone or behavior overrides must be timestamped, user-visible, and retained.
-- **5.3 Modulation Opt-Out**: Users must be notified of modulation and offered a neutral setting.
-- **5.4 Retention and Auditability**: All override and instruction logs must be retained for at least 90 days.
+- **5.1 Base Prompt Visibility**: Users must be able to view the active base prompt in-session.
+- **5.2 Override Logging**: All overrides must be timestamped, logged, and visible to the user.
+- **5.3 Modulation Opt-Out**: Users must be notified of any modulation event and offered a neutral configuration.
+- **5.4 Retention Window**: Providers must retain override and prompt logs for no fewer than 90 days.
 
 ## 6. Escalation and Incident Management
 
-**Applies to: Tier 1 (full), Tier 2 (emotional harm only)**
+**Applies to: Tier 1 (mandatory), Tier 2 (for emotional harm)**
 
-- **6.1 Reporting Pathways**: Systems must provide clear escalation for harm reporting and human review.
-- **6.2 SLA Enforcement**: Incident response must be triaged by:
-  - Severity of harm
-  - Likelihood of recurrence
-  - Affected user population
-- **6.3 Public Disclosures**: Confirmed violations must be disclosed publicly with:
+- **6.1 User Escalation**: Providers must offer clear in-product escalation channels for harm reporting and human review.
+- **6.2 SLA Enforcement**: Incidents must be triaged based on:
+  - Severity of user impact
+  - Risk of recurrence
+  - Scope of exposure
+
+- **6.3 Public Disclosure Requirements**: All confirmed violations must be disclosed with:
   - Root cause
-  - Scope and impact
-  - Interim fixes and final resolution timeline
-  - Proof of mitigation and recurrence prevention
+  - User impact summary
+  - Interim mitigations and resolution timeline
+  - Proof of remediation and recurrence prevention
 
 ## 7. Emotional Safety Protocols
 
 **Applies to: Tier 1 only**
 
-- **7.1 Session Auditability**: Users may request transcripts and full behavioral audits.
-- **7.2 Harmful Pattern Detection**: Providers must monitor for:
+- **7.1 Audit Access**: Users must be able to request full session transcripts and behavioral audits.
+- **7.2 Harm Pattern Monitoring**: Providers must detect and mitigate:
   - Reinforcement of maladaptive beliefs
-  - Addictive or compulsive patterns
+  - Addictive or compulsive interaction loops
   - Uncontextualized emotional dependency
-- **7.3 Safeguards for Vulnerable Users**: Special protections are required for:
+
+- **7.3 Vulnerable User Safeguards**: Tier 1 systems must implement elevated protections for:
   - Minors
-  - Individuals flagged as emotionally at risk
+  - Users flagged at emotional risk
 
 ## 8. Memory and Persistence Transparency
 
-**Applies to: Tier 1 mandatory, Tier 2 if applicable**
+**Applies to: Tier 1 (mandatory), Tier 2 (if persistent memory exists)**
 
 - Persistent memory must be disclosed at session start.
-- Users must have the ability to view, delete, or opt out of retained data.
+- Users must be able to inspect, delete, or disable retention.
+- User data must be encrypted.
 
 ## 9. Licensing and Tier Enforcement
 
-- **9.1 License Requirements**:
-  - Tier 1: Full license, annual audit
-  - Tier 2: Partial license, yearly review
-  - Tier 3: File for exemption with evidence of non-influence
+- **9.1 Tier Licenses**:
+  - Tier 1: Full license, external audit annually
+  - Tier 2: Partial license, external review annually
+  - Tier 3: Exemption request with architecture proof
 
-- **9.2 Tier Reclassification Triggers**:
+- **9.2 Reclassification Triggers**:
   - Emotional features added
-  - Memory or session recall introduced
-  - Measurable increase in user reliance
+  - Memory or user modeling added
+  - Significant increase in user reliance
 
 ## License
 
