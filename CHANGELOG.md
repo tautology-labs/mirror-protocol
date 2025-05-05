@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.4] – 2025-05-04
+
+* Refactor to use tiered classification system
+
 ## [v0.3] – 2025-05-04
 
 * Tone & Complexity Regulation Expanded: Added structural integrity requirements for truth-based responses (3.1, 4.3); enforced visibility of fidelity controls (3.4); formalized tone auditability (3.5).

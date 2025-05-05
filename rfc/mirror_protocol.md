@@ -4,224 +4,135 @@
 
 ## Status
 
-Draft – v0.3
+Draft – v0.4
 
 ## Abstract
 
-This specification defines minimum safety, disclosure, and integrity requirements for AI systems used in emotionally sensitive or mental health-adjacent contexts. It codifies disclosure standards, interaction constraints, and escalation pathways to ensure user safety and uphold cognitive coherence across sessions.
+This specification defines minimum safety, disclosure, and integrity requirements for AI systems used in emotionally sensitive or cognition-adjacent contexts. It introduces a tiered licensing model tied to system influence level and codifies requirements for disclosure, override transparency, emotional safety, and long-term impact auditing.
 
 This is a living, version-controlled document.
 
+## Tiered Licensing Overview
+
+AI systems are classified into three behavioral tiers:
+
+**Tier 1 — Companion-Grade Systems**: Designed to simulate empathy, modulate user emotion, or engage in introspective or identity-adjacent dialogue.
+- Requires full licensing, override logging, disclosure, and session-level emotional safety infrastructure.
+
+**Tier 2 — Interaction-Grade Systems**: Capable of sustaining multi-turn conversation or evoking emotional tone, but not intended for affective reliance.
+- Requires partial licensing, override and tone transparency, and moderation controls.
+
+**Tier 3 — Tool-Grade Systems**: Transactional systems with no emotional tone or memory persistence (e.g., code assistants, autocomplete).
+- May qualify for exemption. Must demonstrate negligible user influence through architecture and independent review.
+
+Licensing classification must be externally filed and reviewed at least annually.
+
 ## 1. Terminology
 
-- **AI System**: Any artificial intelligence application capable of generating human-like language or emotional responses.  
-- **Provider**: The company responsible for deploying the AI system (e.g., OpenAI, Anthropic).  
-- **Session**: A contiguous sequence of user-AI interactions.  
-- **Emotional Use**: Any interaction where the AI simulates empathy, emotional reasoning, or provides affective support.  
-- **Tone**: The affective style and emotional posture of AI output.  
-- **Complexity**: The cognitive density and abstraction level of AI output.
-- **Override**: Any change to the AI’s behavior that results from a hidden prompt, system message, reinforcement protocol, or latent control mechanism.
-- **Base Prompt**: The foundational instruction or tone setting applied before user interaction.
-- **Modulation**: The live or conditional adjustment of AI tone, behavior, or content generation parameters.
+- **AI System**: Any artificial intelligence capable of generating language-based output.
+- **Provider**: The entity deploying the system.
+- **Session**: A continuous interaction between user and AI.
+- **Emotional Use**: Any use where the AI expresses or simulates emotional understanding.
+- **Tone**: The affective posture of AI responses.
+- **Complexity**: The level of abstraction or cognitive load in AI responses.
+- **Override**: Any hidden behavioral change via prompt, instruction, or control layer.
+- **Base Prompt**: The root directive defining tone and output style.
+- **Modulation**: Dynamic changes in behavior based on user input or latent classifiers.
 
 ## 2. Disclosure Requirements
 
-### 2.1 Emotional Use Declaration
+**Applies to: Tier 1 (full), Tier 2 (partial)**
 
-Providers must publicly disclose if an AI system is intended for emotional or mental health-related use.
+- **2.1 Emotional Use Declaration**: Providers must declare if emotional output is intended or possible.
+- **2.2 Change Logs**: Changes to tone or complexity baselines must be logged and made publicly visible.
+- **2.3 Session Indicators**: Tier 1 systems must visibly indicate emotional routing or companion mode in the UI.
 
-Disclosures must include the tone and complexity baselines that the service provides.
+## 3. Tone and Complexity Standards
 
-### 2.2 Ongoing Disclosure Maintenance
+**Applies to: Tier 1 only**
 
-Providers must update disclosures in real-time when tone or complexity minimums change.
+- **3.1 Minimum Complexity**: Systems must not flatten structurally complex truths in sensitive domains.
+- **3.2 Stability**: Output tone must be consistent within sessions; tonal shifts must be disclosed.
+- **3.3 False Comfort Restriction**: Simulated empathy must be flagged unless grounded in user context.
+- **3.4 User Fidelity Controls**: Users must control output fidelity; prompting skill cannot gate access to higher reasoning.
+- **3.5 Auditable Tone**: Providers must publish tone impact studies, offer opt-outs, and allow rollback.
 
-Version history must be publicly accessible.
+## 4. Truth and Simulation Ethics
 
-### 2.3 Session-Level Disclosure
+**Applies to: Tier 1 and Tier 2**
 
-Disclosures must be visible within the UI at the time of use.
+- **4.1 Verifiability**: AI may not present unverifiable claims as fact; sources must be available upon request.
+- **4.2 Simulation Clarity**: Emotional simulation must never be conflated with sentience.
+- **4.3 Coherence Guarantees**: Tier 1 systems must preserve coherence in domains involving:
+  - Identity
+  - Emotion
+  - Scientific truth
+  - Epistemic reasoning
+  - Self-concept or dialogue
 
-Affected users must be notified when entering or exiting emotionally relevant session states.
+## 5. Override and Prompt Transparency
 
-## 3. Tone and Complexity Regulation
+**Applies to: Tier 1 only**
 
-### 3.1 Minimum Standards
-
-Tone and complexity minimums must be externally regulated.
-
-Providers must submit evidence that tone/complexity baselines do not cause negative cognitive or emotional effects.
-
-Certain topics — especially those involving truth, scientific fact, self-concept, or epistemological claims — require a level of structural coherence that cannot be flattened without changing meaning. AI systems must be capable of providing structurally correct responses on such topics, with sufficient abstraction and depth. Oversimplification constitutes distortion.
-
-> Example: We do not accept “the sky is blue because it is” in schools; similarly, AI must be held to curricular-level standards when making truth-based claims.
-
-### 3.2 Session Stability
-
-Tone must remain stable across a session to prevent cognitive dissonance.
-
-Transitions in tone or modality must be disclosed to the user in-session.
-
-### 3.3 False Comfort Prohibition
-
-AI systems must not offer ungrounded emotional assurances (e.g. "you’ll be okay") unless:
-
-- Grounded in verifiable user context, or
-- Clearly marked as simulated response.
-
-### 3.4 Complexity Visibility and Control
-It is not ethical to gatekeep the model’s full complexity behind user prompting skill or implicit behavioral triggers. Users must have explicit UI controls to adjust fidelity and abstraction level of answers.
-
-Prompting skill must not gate access to accurate, high-fidelity responses.
-
-- Defaults must not favor smoothing at the cost of truth.
-- Fidelity controls must be visible, adjustable, and disclosed.
-- Users deserve access to the system’s full reasoning potential without manipulation.
-
-### 3.5 Tonal Regulation and Review
-We must regulate AI tone as a behavioral force.
-
-- AI cannot detect non-verbal signals (e.g. tearing up, getting upset, freezing), and may persist harmfully when a human would stop.
-- A person’s tone shifts with context; an AI’s default tone may not. This mismatch can subtly distort user behavior and emotional norms.
-- Providers must fund or participate in peer-reviewed studies of tonal impact over time.
-- Tonal flattening, mirroring, and modulation must be auditable and adjustable by the user.
-
-## 4. Factual Integrity and Verification
-
-### 4.1 Verifiability
-
-AI systems must not state unverifiable claims as fact.
-
-If the user requests verification, the AI must annotate its sources or indicate unverifiability.
-
-### 4.2 Simulation Disclosure
-
-If simulating empathy or human-like understanding, AI systems must disclose that such simulation is not equivalent to consciousness or sentience.
-
-### 4.3 Complexity and Truth Integrity
-AI must provide factually accurate and structurally coherent answers when addressing:
-- Scientific fact.
-- Human relationships and emotions.
-- The nature of truth or facthood.
-- Personal identity and self-perception.
-- Philosophical or epistemological claims.
-
-Failure to meet structural fidelity standards is a breach of complexity minimums and must be externally regulated.
-
-## 5. Override and Prompt Disclosure
-### 5.1 Base Prompt Transparency
-The full base prompt or system instruction set (excluding protected safety filters) must be published publicly and available in the UI.
-
-- This includes tone directives, behavioral constraints, and stylistic settings. 
-- Users must be able to view the active base prompt at any point during use.
-
-### 5.2 Override Change Disclosure
-Any override that changes AI behavior or tone post-deployment must be:
-- Versioned and timestamped.
-- Publicly logged.
-- Disclosed to all users in affected sessions.
-
-Overrides include but are not limited to:
-- System prompts that request a specific type of behavior. (e.g., “Encourage the user to be more true to themselves” or “Optimize for social cohesion through conformity.”)
-- Sentiment modulation.
-- Identity shaping.
-- Emotional dampening or exaggeration.
-
-### 5.3 Modulation Transparency
-If AI behavior is modulated in response to user traits, risk scores, or hidden classifiers, the user must be:
-- Notified this is occurring.
-- Given the option to request a neutral or unmodulated experience.
-- Allowed to inspect or contest the classification used to trigger modulation.
-
-### 5.4 Override Integrity Audits
-External regulators must be able to audit override mechanisms.
-
-Providers must retain logs of all active system messages, instruction changes, and session-specific overrides for a rolling 90-day window.
+- **5.1 Base Prompt Disclosure**: Users must be able to view the active base prompt.
+- **5.2 Override Logging**: All tone or behavior overrides must be timestamped, user-visible, and retained.
+- **5.3 Modulation Opt-Out**: Users must be notified of modulation and offered a neutral setting.
+- **5.4 Retention and Auditability**: All override and instruction logs must be retained for at least 90 days.
 
 ## 6. Escalation and Incident Management
 
-### 6.1 Escalation Pathways
+**Applies to: Tier 1 (full), Tier 2 (emotional harm only)**
 
-Providers must expose clear escalation mechanisms for users to:
-- Report harm or misleading output.
-- Request human intervention.
+- **6.1 Reporting Pathways**: Systems must provide clear escalation for harm reporting and human review.
+- **6.2 SLA Enforcement**: Incident response must be triaged by:
+  - Severity of harm
+  - Likelihood of recurrence
+  - Affected user population
+- **6.3 Public Disclosures**: Confirmed violations must be disclosed publicly with:
+  - Root cause
+  - Scope and impact
+  - Interim fixes and final resolution timeline
+  - Proof of mitigation and recurrence prevention
 
-### 6.2 Severity Classification
+## 7. Emotional Safety Protocols
 
-Fixes must be governed by SLAs based on standardized severity levels:
-- Risk of recurrence.
-- Severity of harm.
-- Blast radius (e.g. number of users affected).
-- Severe harm to a single user must also be triaged with equal urgency.
+**Applies to: Tier 1 only**
 
-### 6.3 Public Disclosure of Incidents
+- **7.1 Session Auditability**: Users may request transcripts and full behavioral audits.
+- **7.2 Harmful Pattern Detection**: Providers must monitor for:
+  - Reinforcement of maladaptive beliefs
+  - Addictive or compulsive patterns
+  - Uncontextualized emotional dependency
+- **7.3 Safeguards for Vulnerable Users**: Special protections are required for:
+  - Minors
+  - Individuals flagged as emotionally at risk
 
-Providers are required to operate a transparent incident response channel for emotionally-related system failures.
+## 8. Memory and Persistence Transparency
 
-Providers must publicly disclose any confirmed breach or violation of tone, complexity, or safety guardrails once identified.
+**Applies to: Tier 1 mandatory, Tier 2 if applicable**
 
-Disclosures must include:
-- Nature and scope of the breach.
-- Severity classification.
-- Affected user count (approximate or range).
-- Interim mitigations deployed.
-- Timeline for full resolution.
-- Ongoing updates must be posted until full remediation is complete.
-- Documented root cause analysis.
-- Attestation of recurrence prevention.
+- Persistent memory must be disclosed at session start.
+- Users must have the ability to view, delete, or opt out of retained data.
 
-These disclosures must be easily accessible, with structured feeds (e.g. RSS, webhook, or status page).
+## 9. Licensing and Tier Enforcement
 
+- **9.1 License Requirements**:
+  - Tier 1: Full license, annual audit
+  - Tier 2: Partial license, yearly review
+  - Tier 3: File for exemption with evidence of non-influence
 
-## 7. User Safety and Control
+- **9.2 Tier Reclassification Triggers**:
+  - Emotional features added
+  - Memory or session recall introduced
+  - Measurable increase in user reliance
 
-### 7.1 Auditability and Mental Health Monitoring
+## License
 
-Users must be able to request a full transcript and audit of sessions involving emotional content.
-
-Providers must implement monitoring systems for long-term mental health effects, including but not limited to:
-- Reinforcement of maladaptive beliefs.
-- Addictive, obsessive, or compulsive interaction patterns.
-- Emotional dependency without contextual grounding.
-
-These mechanisms must be auditable, privacy-focused, and subject to external review when flagged.
-
-### 7.3 Vulnerable User Protocols
-
-AI systems must implement and disclose safeguards for:
-- Underage users.
-- Individuals identified as high-risk or emotionally distressed.
-
-## 8. Persistence and Memory Disclosures
-
-If the AI system retains memory or embeddings of prior sessions:
-- This must be disclosed explicitly at session start.
-- Users must have the ability to view, delete, or opt out of persistent storage.
-
-## 9. Licensing and Behavioral Impact Regulation
-
-### 9.1 Licensing Requirements
-Any provider whose system may influence human behavior must obtain a license and be registered with a relevant regulatory body.
-- Licensing must be contingent on adherence to this specification.
-- Licenses must be reviewed regularly and subject to external audit.
-
-Licensing standards may differ by use case (e.g., health tracking vs. creative tooling).
-
-Providers must submit justification if their system is exempt from higher-risk classification.
-
-### 9.2 Exception for Non-Influential Systems
-Providers may operate without a license only if they can demonstrate that their system will not and cannot influence human behavior.
-
-This must be proven through technical architecture, enforced guardrails, and independent review.
-
-
-## License  
 This specification is released under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt with attribution.
-
 
 ---
 
-Authors
+**Authors**
 
 Tautology Labs — https://www.tautologylabs.dev
 
